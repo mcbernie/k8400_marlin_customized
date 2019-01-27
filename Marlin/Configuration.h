@@ -608,7 +608,7 @@
 
 //NEW
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {115.49,115.49,4266.66,148.7}  // default extruder is 200
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {80,80,4266.66,74.35}  // default extruder is 200 // with 148.7
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {80,80,4266.66,74.35 }  // default extruder is 200 // with 148.7
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {134.74,134.74,4266.66,148.7}  // default extruder is 200
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {57.745,57.745,4266.66,148.7}  // default extruder is 200
 
