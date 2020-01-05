@@ -74,7 +74,7 @@
 // User-specified version info of this build to display in [Pronterface, etc] terminal window during
 // startup. Implementation of an idea by Prof Braino to inform user that any changes made to this
 // build by the user have been successfully uploaded into firmware.
-#define STRING_CONFIG_H_AUTHOR "(Anthony Birkett, default config)" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "(Nico Bruegge, default config)" // Who made the changes.
 #define SHOW_BOOTSCREEN
 #define STRING_SPLASH_LINE1 SHORT_BUILD_VERSION // will be shown during bootup in line 1
 #define STRING_SPLASH_LINE2 WEBSITE_URL         // will be shown during bootup in line 2
@@ -608,7 +608,8 @@
 
 //NEW
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {115.49,115.49,4266.66,148.7}  // default extruder is 200
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {80,80,4266.66,74.35 }  // default extruder is 200 // with 148.7
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   {80,80,4266.66,74.35 }  // default extruder is 200 // with 148.7
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {80,80,2133.3,74.35 }  // default extruder is 200 // with 148.7
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {134.74,134.74,4266.66,148.7}  // default extruder is 200
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {57.745,57.745,4266.66,148.7}  // default extruder is 200
 
@@ -882,15 +883,15 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 210
-#define Y_BED_SIZE 170
+#define X_BED_SIZE 200
+#define Y_BED_SIZE 180
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
-#define Y_MIN_POS 0 //IMPORTANT NEED TO CHANGE TO 30!!
+#define Y_MIN_POS 20 
 #define Z_MIN_POS 0
 #define X_MAX_POS (X_BED_SIZE + X_MIN_POS)
-#define Y_MAX_POS Y_BED_SIZE
+#define Y_MAX_POS (Y_BED_SIZE + Y_MIN_POS)
 #define Z_MAX_POS 190
 
 /**
@@ -1259,7 +1260,7 @@
 
 // Preheat Constants
 #define PREHEAT_1_TEMP_HOTEND 210
-#define PREHEAT_1_TEMP_BED      0
+#define PREHEAT_1_TEMP_BED     60
 #define PREHEAT_1_FAN_SPEED   165 // Value from 0 to 255
 
 #define PREHEAT_2_TEMP_HOTEND 245
@@ -1429,7 +1430,7 @@
  * you must uncomment the following option or it won't work.
  *
  */
-//#define SDSUPPORT
+#define SDSUPPORT
 
 /**
  * SD CARD: SPI SPEED
